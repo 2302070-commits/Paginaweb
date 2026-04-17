@@ -1,0 +1,87 @@
+{
+  "theme": "LIGHT",
+  "archetype": "4 (Swiss & High-Contrast)",
+  "vibe": "Apple-like minimalistic, clean, premium, spacious, professional",
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "Manrope",
+    "rules": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-medium text-slate-900",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-medium text-slate-900",
+      "h3": "text-xl sm:text-2xl tracking-tight font-medium",
+      "body": "text-base leading-relaxed text-slate-600",
+      "labels": "text-xs uppercase tracking-[0.2em] text-slate-500 font-semibold"
+    }
+  },
+  "color_palette": {
+    "background": "#ffffff",
+    "surface": "#f5f5f7",
+    "surface_hover": "#e8e8ed",
+    "primary": "#000000",
+    "primary_foreground": "#ffffff",
+    "accent": "#2997ff",
+    "accent_hover": "#0071e3",
+    "text_main": "#1d1d1f",
+    "text_muted": "#86868b",
+    "border": "#d2d2d7"
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous spacing. Use p-8, p-12, p-16 to give products breathing room.",
+    "bento_grid": "For Homepage Category Highlights, use an asymmetric 12-col grid. Hero spans 8 cols, secondary spans 4 cols.",
+    "product_grid": "Grid cols 1 md:grid-cols-2 lg:grid-cols-4. Gap-6 or gap-8.",
+    "containers": "Max-width 7xl (max-w-7xl), mx-auto, px-6 md:px-12."
+  },
+  "components": {
+    "buttons": "Rounded-full for primary actions. px-6 py-3. Solid black or accent blue. Hover: scale slightly or translate-y-[-1px]. shadow-sm.",
+    "cards": "Cardless or very subtle rounded-2xl with bg-[#f5f5f7] and no border. On hover, add a soft shadow-[0_8px_32px_rgba(0,0,0,0.08)].",
+    "header": "Crystal Glassmorphism. sticky top-0 z-50. bg-white/70 backdrop-blur-xl border-b border-[#d2d2d7]/50. Must contain search bar.",
+    "inputs": "Rounded-xl, bg-[#f5f5f7], border-transparent focus:bg-white focus:border-[#2997ff] focus:ring-1 focus:ring-[#2997ff] transition-all.",
+    "badges": "Rounded-full px-3 py-1 bg-black text-white text-xs font-medium."
+  },
+  "pages_and_features": {
+    "homepage": {
+      "hero": "High-impact, product-focused. Minimal text. Use generated hero_laptop image with no overlay, placed on a very light gray background.",
+      "category_highlights": "Bento grid with large images of Laptops, Desktop PCs, Gamer PCs, Componentes."
+    },
+    "product_catalog": {
+      "filters": "Sidebar or top horizontal sticky bar. Clean toggles (Shadcn switch/checkbox).",
+      "sorting": "Sort by: Más comprado, Mejor calificado, Precio bajo a alto, Precio alto a bajo, Peor calificado.",
+      "live_search": "Command menu (ctrl+k style) or expansive search bar in header that overlays results."
+    },
+    "product_detail": {
+      "layout": "Sticky product details on right, scrolling image gallery on left.",
+      "reviews": "Clean list, stars in black or accent color, user avatars.",
+      "add_to_cart": "Sticky bottom bar on mobile, prominent sticky button on desktop."
+    },
+    "cart_checkout": {
+      "style": "Slide-out sheet for cart, dedicated minimal page for checkout (focus strictly on conversion, remove header nav)."
+    }
+  },
+  "images": {
+    "hero_laptop": "https://static.prod-images.emergentagent.com/jobs/3ff5cd55-ae83-48e6-b624-a3f829814018/images/dc9adfd602dfcad366e8e89a7234003e6eca7192c5cabc3704ee648448b29735.png",
+    "hero_gaming_pc": "https://static.prod-images.emergentagent.com/jobs/3ff5cd55-ae83-48e6-b624-a3f829814018/images/80f15bd1368d85d0183d94b42b7fb95c855aa696e378ced89639ad5f73e97245.png",
+    "hero_components": "https://static.prod-images.emergentagent.com/jobs/3ff5cd55-ae83-48e6-b624-a3f829814018/images/cef8f0fef9a042b13259e59d117e4731a0c6552922a05d483e36e25c6e6574ac.png",
+    "category_laptop_1": "https://images.unsplash.com/photo-1542897477-f1a0cb8e8ef0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwbGFwdG9wJTIwb24lMjBkZXNrfGVufDB8fHx8MTc3NjQzNjU3OXww&ixlib=rb-4.1.0&q=85",
+    "category_laptop_2": "https://images.unsplash.com/photo-1644337540803-2b2fb3cebf12?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwbGFwdG9wJTIwb24lMjBkZXNrfGVufDB8fHx8MTc3NjQzNjU3OXww&ixlib=rb-4.1.0&q=85",
+    "category_desktop_1": "https://images.unsplash.com/photo-1758640265738-e23cd019291c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBkZXNrdG9wJTIwY29tcHV0ZXJ8ZW58MHx8fHwxNzc2NDM2NTc5fDA&ixlib=rb-4.1.0&q=85",
+    "category_gaming_pc_1": "https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBwYyUyMHNldHVwfGVufDB8fHx8MTc3NjQzNjU3OXww&ixlib=rb-4.1.0&q=85",
+    "category_components_1": "https://images.unsplash.com/photo-1768052199239-5fe972ae3990?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwxfHxjb21wdXRlciUyMG1vdGhlcmJvYXJkJTIwY29tcG9uZW50c3xlbnwwfHx8fDE3NzY0MzY1Nzl8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "motion_and_interactions": {
+    "hover": "Products in grid gently scale up (scale-105) and get a soft shadow. Use framer-motion layout animations for filtering.",
+    "page_transition": "Fade in on load.",
+    "cart_sheet": "Slide in from right, with backdrop blur."
+  },
+  "instructions_to_main_agent": [
+    "Build a clean, Apple-like E-commerce platform in Spanish.",
+    "Include sample products for Laptops, PC de Escritorio, PC Gamer, Componentes.",
+    "Implement shopping cart and checkout flow using Context or simple state.",
+    "Implement User Auth (login/register) and profile page.",
+    "Implement Product details with Ratings and Reviews.",
+    "Implement search bar in header with live-filtering.",
+    "Implement 'Componentes' section specifically with sorting controls: Más comprado, Mejor calificado, Precio bajo a alto, Precio alto a bajo, Peor calificado.",
+    "Use Phosphor icons or Lucide.",
+    "Use Shadcn UI customized for rounded-2xl or rounded-3xl corners on cards.",
+    "Add 'data-testid' to all interactive elements."
+  ]
+}
