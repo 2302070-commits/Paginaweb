@@ -5,7 +5,7 @@ export const API_BASE = BACKEND_URL.endsWith("/api") ? BACKEND_URL : `${BACKEND_
 
 export const api = axios.create({
   baseURL: API_BASE,
-  withCredentials: true,
+  withCredentials: false,
 });
 
 export function formatApiErrorDetail(detail) {

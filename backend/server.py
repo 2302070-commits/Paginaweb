@@ -206,19 +206,11 @@ async def get_current_user(request: Request) -> dict:
 app = FastAPI(title="CompuMax API")
 api = APIRouter(prefix="/api")
 
-# CORS: allow specific frontend origin (required for cookies w/ credentials)
-frontend_url = os.environ.get("FRONTEND_URL", "http://localhost:3000").rstrip("/")
-cors_origins = [
-    frontend_url, 
-    "http://localhost:3000",
-    "https://compumax.vercel.app",
-    "https://paginaweb-beryl.vercel.app"
-]
-
+# CORS: allow all origins (simplified for production/debug)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=cors_origins,
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
