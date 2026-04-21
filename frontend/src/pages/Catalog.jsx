@@ -31,8 +31,7 @@ export default function Catalog() {
       .then(({ data }) => setProducts(data))
       .catch((err) => {
         console.error("Error fetching products:", err);
-        const urlRequested = `${api.defaults.baseURL}/products`;
-        setError(`Error de conexión al servidor. Intentando conectar a: ${urlRequested}. Revisa que esta URL sea correcta y que el backend esté encendido.`);
+        setError("Lo sentimos, no pudimos cargar los productos en este momento. Por favor, inténtalo de nuevo más tarde.");
       })
       .finally(() => setLoading(false));
   }, [category, sort]);
