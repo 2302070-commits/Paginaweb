@@ -207,8 +207,13 @@ app = FastAPI(title="CompuMax API")
 api = APIRouter(prefix="/api")
 
 # CORS: allow specific frontend origin (required for cookies w/ credentials)
-frontend_url = os.environ.get("FRONTEND_URL", "http://localhost:3000")
-cors_origins = [frontend_url, "http://localhost:3000"]
+frontend_url = os.environ.get("FRONTEND_URL", "http://localhost:3000").rstrip("/")
+cors_origins = [
+    frontend_url, 
+    "http://localhost:3000",
+    "https://compumax.vercel.app",
+    "https://paginaweb-beryl.vercel.app"
+]
 
 app.add_middleware(
     CORSMiddleware,

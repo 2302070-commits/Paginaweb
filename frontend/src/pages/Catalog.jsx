@@ -21,12 +21,18 @@ export default function Catalog() {
   const [sp, setSp] = useSearchParams();
   const sort = sp.get("sort") || "most_purchased";
   const [products, setProducts] = useState([]);
+  const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
+    setError(null);
     api.get("/products", { params: { category, sort, limit: 60 } })
       .then(({ data }) => setProducts(data))
+      .catch((err) => {
+        console.error("Error fetching products:", err);
+        setError("No se pudieron cargar los productos. Por favor verifica la conexión con el servidor.");
+      })
       .finally(() => setLoading(false));
   }, [category, sort]);
 
@@ -63,7 +69,10 @@ export default function Catalog() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-8">
         {products.map((p, i) => <ProductCard key={p.id} product={p} index={i} />)}
       </div>
-      {!loading && products.length === 0 && (
+      {error && (
+        <div className="text-center py-24 text-red-500 font-medium">{error}</div>
+      )}
+      {!loading && !error && products.length === 0 && (
         <div className="text-center py-24 text-ink-500">No hay productos aún en esta categoría.</div>
       )}
     </div>
