@@ -91,9 +91,10 @@ credentials.json
 -e 
 # Environment and credential files
 .env
-.env.*
-*.env
-credentials.json
+.env.production
+.env.local
+.env.development
+!.env.example
 *.pem
 *.key
 .credentials
