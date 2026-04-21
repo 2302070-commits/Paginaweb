@@ -606,6 +606,16 @@ async def root():
     return {"message": "CompuMax API"}
 
 
+@app.get("/")
+async def home():
+    return {
+        "status": "online",
+        "message": "CompuMax Backend is running",
+        "api_docs": "/docs",
+        "api_root": "/api"
+    }
+
+
 app.include_router(api)
 
 
@@ -614,3 +624,7 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 logger = logging.getLogger(__name__)
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("server:app", host="0.0.0.0", port=8000, reload=True)
